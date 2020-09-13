@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Text Editor</title>
+	<!-- <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="credits.js"></script> -->
+    
+
+    <style type="text/css">
+		body { width: 400px;}
+		body { height: 500px;}
+	  </style>
+  </head>
+
+<body>
+	<h3 id = 'header'>Input text below!</h3>
+
+
+
+
+    <textarea cols="80" rows="20"  id="textBox" >Paste text here!</textarea>
+    <!-- <textarea cols="80" rows="20"  id="resultBox" >Results</textarea> -->
+
+    <br>
+    <div id = 'button1'>
+        <button id = 'trimButton' type="button">Remove Extra Spaces</button>
+        <button id = 'breakButton' type="button">Remove Extra Line Breaks</button>
+        <!-- <button id = 'leftButton' type="button">Left allign</button> -->
+
+        
+        <script>
+            // document.addEventListener('DOMContentLoaded', function() {
+	        var link = document.getElementById('trimButton');
+	        link.addEventListener('click', function() {
+            // changeText();
+            let pasted = document.getElementById("textBox").value
+            let results = pasted.replace(/ +(?= )/g,'')
+                
+                document.getElementById("textBox").value = results;
+                console.log(pasted)
+            }); 
+
+            document.getElementById('breakButton').addEventListener('click', function() {
+            let pasted = document.getElementById("textBox").value
+            let unbroken = pasted.replace(/\n\s*\n/g, '\n')
+                document.getElementById("textBox").value = unbroken;
+            }); 
+
+            // document.getElementById('leftButton').addEventListener('click', function() {
+            // let pasted = document.getElementById("textBox").value
+            // let unbroken = pasted.replace(/\n\s*\n/g, '\n')
+            //     document.getElementById("textBox").value = unbroken;
+            // }); 
+
+        
+        </script>
+    
+    </div>	
+    
+
+
+
+</body>
+</html>
