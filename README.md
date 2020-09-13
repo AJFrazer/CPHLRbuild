@@ -1,5 +1,5 @@
 # CPHLRbuild
-<i>Simple html page to help format laws for policy surveillance </veni>
+<i>Simple html page to help format laws for policy surveillance </veni></i>
 
 This tool is even <i>more</i> rudimentary. But, there are a couple buttons to execute fucntions I find useful. So, I hope you find it useful!
 
